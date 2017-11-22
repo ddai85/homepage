@@ -1,7 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Button from 'material-ui/Button';
+import Header from './components/header.jsx';
+import List from './components/list.jsx';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import $ from 'jquery';
+
+import deepOrange from 'material-ui/colors/deepOrange';
+import lightBlue from 'material-ui/colors/lightBlue';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: lightBlue,
+    secondary: deepOrange,
+  },
+  status: {
+    danger: 'red',
+  },
+});
 
 
 class App extends React.Component {
@@ -15,11 +30,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Button>
-          Hello World
-        </Button>
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <Header />
+        <List />
+      </MuiThemeProvider>
     );
   }
 }
