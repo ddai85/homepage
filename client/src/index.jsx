@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import Button from 'material-ui/Button';
 import $ from 'jquery';
 
 
@@ -15,10 +16,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>hello world!!!</p>
+        <Button>
+          Hello World
+        </Button>
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
