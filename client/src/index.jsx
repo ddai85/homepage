@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Header from './components/header.jsx';
 import List from './components/list.jsx';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import Grid from 'material-ui/Grid';
 import $ from 'jquery';
 
 import deepOrange from 'material-ui/colors/deepOrange';
@@ -31,8 +32,12 @@ class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Header />
-        <List />
+        <div>
+          <Header/>
+        </div>
+        <div>
+          <List />
+        </div>
       </MuiThemeProvider>
     );
   }

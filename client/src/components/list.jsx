@@ -4,19 +4,6 @@ import Card from './card.jsx'
 import $ from 'jquery';
 import Grid from 'material-ui/Grid';
 
-const styles = theme => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      height: 140,
-      width: 100,
-    },
-    control: {
-      padding: theme.spacing.unit * 2,
-    },
-});
-
 class List extends React.Component {
   constructor(props) {
     super(props);
@@ -27,15 +14,19 @@ class List extends React.Component {
 
 
   render() {
+
     return (
-      <div>
-        <p>
-          I am List
-        </p>
-        <Card/>
-        <br/>
-        <Card/>
-      </div>
+      <Grid container>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={24}>
+            {[0, 1, 2, 3, 4].map(value => (
+              <Grid key={value} item>
+                <Card/>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
     );
   }
 }
