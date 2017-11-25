@@ -11,8 +11,8 @@ import Menu, { MenuItem } from 'material-ui/Menu';
 
 const styles = theme => ({
     root: {
-      marginTop: theme.spacing.unit * 2,
-      marginBottom: theme.spacing.unit * 2,
+      marginTop: theme.spacing.unit * 3,
+      marginBottom: theme.spacing.unit * 3,
       width: '100%',
     },
     menuButton: {

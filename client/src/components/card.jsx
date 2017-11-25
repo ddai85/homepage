@@ -7,7 +7,7 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345,
+    maxWidth: 360,
   },
   media: {
     height: 200,
@@ -16,6 +16,7 @@ const styles = {
 
 function SimpleCard(props) {
   const { classes } = props;
+  const techstack = props.details.techstack.join(' | ');
   return (
     <div>
       <Card className={classes.card}>
@@ -28,6 +29,10 @@ function SimpleCard(props) {
           <Typography type="headline" component="h2">
             {props.details.title}
           </Typography>
+          <Typography type="subheading" component="p">
+            {techstack}
+          </Typography>
+          <br/>
           <Typography component="p">
             {props.details.description}
           </Typography>
@@ -38,6 +43,9 @@ function SimpleCard(props) {
           </Button>
           <Button href={props.details.gitHub} dense color="primary">
             GitHub Repo
+          </Button>
+          <Button href={props.details.achievements} dense color="primary">
+            Achievements
           </Button>
         </CardActions>
       </Card>
