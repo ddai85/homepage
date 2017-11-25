@@ -57,6 +57,7 @@ class Header extends React.Component {
                             open={this.state.open}
                             onRequestClose={this.handleRequestClose}
                             >
+                            <MenuItem onClick={this.handleRequestClose}>My Portfolio</MenuItem>
                             <MenuItem onClick={this.handleRequestClose}>About Me</MenuItem>
                             <MenuItem onClick={this.handleRequestClose}>My Resume</MenuItem>
                             <MenuItem onClick={this.handleRequestClose}>GitHub</MenuItem>

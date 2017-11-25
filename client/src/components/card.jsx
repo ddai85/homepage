@@ -21,24 +21,23 @@ function SimpleCard(props) {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={props.details.picture}
+          title="picture title"
         />
         <CardContent>
           <Typography type="headline" component="h2">
-            Lizard
+            {props.details.title}
           </Typography>
           <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {props.details.description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button dense color="primary">
-            Share
+          <Button href={props.details.video} dense color="primary">
+            Video Demo
           </Button>
-          <Button dense color="primary">
-            Learn More
+          <Button href={props.details.gitHub} dense color="primary">
+            GitHub Repo
           </Button>
         </CardActions>
       </Card>

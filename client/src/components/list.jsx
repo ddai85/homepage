@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Card from './card.jsx'
 import $ from 'jquery';
 import Grid from 'material-ui/Grid';
+import projects from '../projects/template.js'
 
 class List extends React.Component {
   constructor(props) {
@@ -19,9 +20,9 @@ class List extends React.Component {
       <Grid container>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={24}>
-            {[0, 1, 2, 3, 4].map(value => (
-              <Grid key={value} item>
-                <Card/>
+            {projects.map(value => (
+              <Grid key={value.key} item>
+                <Card details = {value}/>
               </Grid>
             ))}
           </Grid>
