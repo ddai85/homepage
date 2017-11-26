@@ -5,14 +5,13 @@ import $ from 'jquery';
 import Grid from 'material-ui/Grid';
 import projects from '../projects/template.js'
 
-class List extends React.Component {
+export default class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
 
     };
   }
-
 
   render() {
 
@@ -22,7 +21,7 @@ class List extends React.Component {
           <Grid container justify="center" spacing={24}>
             {projects.map(value => (
               <Grid key={value.key} item>
-                <Card details = {value}/>
+                <Card details={value}/>
               </Grid>
             ))}
           </Grid>
@@ -31,5 +30,3 @@ class List extends React.Component {
     );
   }
 }
-
-module.exports = List;
