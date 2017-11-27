@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>the Dota Table</title>
+		<title>Homepage of Dan Dai</title>
+		<link rel="stylesheet" type="text/css" href="./popup/YouTubePopUp.css">
+		<script type="text/javascript" src="./popup/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="./popup/YouTubePopUp.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function(){
+				jQuery("a.bla-1").YouTubePopUp();
+				jQuery("a.bla-2").YouTubePopUp( { autoplay: 0 } ); // Disable autoplay
+			});
+		</script>
 	</head>
-	<body id="app">
-	<script src="main.bundle.js"></script>
-
+	<body>
+		<div id="app"/>
+		<script src="main.bundle.js"></script>
 	</body>
 </html>

@@ -1,0 +1,58 @@
+const projects = [
+  {
+    key: 1,
+    title: 'Yelp-Alytics',
+    description: 'Yelp-Alytics is a service-oriented app measuring the effectiveness of personalized restaurant recommendations. User behavior (clicks, check-ins and reviews) is recorded and analyzed after users are served either generic or personalized list of restaurants.',
+    picture: './static/yelpalytics-play.jpg',
+    techstack: ['Node', 'ElasticSearch', 'Kibana', 'MySQL', 'AWS'],
+    gitHub: 'https://github.com/git-reset-hard',
+    video: 'https://youtu.be/3RH5Z-2CUhg',
+  },
+  {
+    key: 2,
+    title: 'Q-Deux',
+    description: 'Q-Deux is an app built for restaurant owners to manage customer wait queues. Restaurant managers sign up and add their restaurants to the app. Customers add themselves to restaurant queues and are notified by text/e-mail when their table is ready.',
+    picture: './static/qdeux-play.jpg',
+    techstack: ['React', 'Node/Express', 'PostgreSQL'],
+    gitHub: 'https://github.com/Bare-Minimum/q-dot',
+    video: 'https://youtu.be/UHpM0OjfbHY',
+  },
+  {
+    key: 3,
+    title: 'Travel With Friends',
+    description: 'Travel With Friends is a social trip planning app to manage logistics between groups of travellers. Features include shared expense tracking and voting on landmarks.',
+    picture: './static/travelfriends-play.jpg',
+    techstack: ['React/Redux', 'Node/Express', 'MySQL'],
+    gitHub: 'https://github.com/Bare-Minimum/Bare-Minimum',
+    video: 'https://youtu.be/Gb8At25OOic',
+  },
+  {
+    key: 4,
+    title: 'Personal Homepage',
+    description: 'Personal landing page to display portfolio of apps and projects. Project cards are rendered dynamically and individual projects are easily added and removed.',
+    picture: './static/homepage.jpg',
+    techstack: ['React', 'Node/Express', 'AWS'],
+    gitHub: 'https://github.com/ddai85/homepage',
+    video: '#',
+  },
+  {
+    key: 5,
+    title: 'ORCATECH App',
+    description: 'Inventory management app to track equipment within an office. This was a solo project used to demonstrate proficiency in React and PHP.',
+    picture: './static/orcatech-play.jpg',
+    techstack: ['React', 'PHP', 'MySQL'],
+    gitHub: 'https://github.com/ddai85/orcatech-app',
+    video: 'https://youtu.be/fbwn2KeLUrk',
+  },
+  {
+    key: 6,
+    title: 'Buffer Inventory Manager',
+    description: 'Scientific buffer inventory management app used by scientists to save buffer recipes as well as provide MSDS (Material Safety Data Sheet) of buffer components.',
+    picture: './static/bufferapp-play.jpg',
+    techstack: ['AngularJS', 'Node/Express', 'MongoDB'],
+    gitHub: 'https://github.com/ddai85/mvp',
+    video: 'https://youtu.be/mTIJ2yLrtVs',
+  },
+]
+
+module.exports = projects;
