@@ -20,17 +20,15 @@ class Aboutme extends React.Component {
       anchorOriginHorizontal: 'center',
       transformOriginVertical: 'top',
       transformOriginHorizontal: 'center',
-      positionTop: 200, // Just so the popover can be spotted more easily
-      positionLeft: 400, // Same as above
+      positionTop: 100, // Just so the popover can be spotted more easily
+      positionLeft: 100, // Same as above
       anchorReference: 'anchorPosition',
     };
     this.handleRequestClose = this.handleRequestClose.bind(this);
   }
 
   handleRequestClose() {
-    this.setState({
-      open: false,
-    });
+    this.props.handleAboutmeClose();
   };
 
   render() {
@@ -49,7 +47,7 @@ class Aboutme extends React.Component {
 
     return (
       <Popover
-        open={open}
+        open={this.props.open}
         anchorEl={anchorEl}
         anchorReference={anchorReference}
         anchorPosition={{ top: positionTop, left: positionLeft }}
@@ -63,7 +61,16 @@ class Aboutme extends React.Component {
         horizontal: transformOriginHorizontal,
         }}
       >
-        <Typography className={classes.typography}>The content of the Popover.</Typography>
+        <Typography type="headline" className={classes.typography}>About Me</Typography>
+        <Typography type="subheading" className={classes.typography}><b>Full Name:</b> Daniel Dai</Typography>
+        <Typography type="subheading" className={classes.typography}><b>Profession:</b> Software Engineer</Typography>
+        <Typography type="subheading" className={classes.typography}><b>Education:</b> </Typography>
+        <Typography type="subheading" className={classes.typography}>UC Davis (Bachelor of Science)</Typography>
+        <Typography type="subheading" className={classes.typography}>Hack Reactor SF (HRSF 81)</Typography>
+        <Typography type="subheading" className={classes.typography}><b>Interests:</b></Typography>
+        <Typography type="subheading" className={classes.typography}>Snowboarding</Typography>
+        <Typography type="subheading" className={classes.typography}>Drumming</Typography>
+
       </Popover>
     );
   }

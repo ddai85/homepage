@@ -31,17 +31,29 @@ class Header extends React.Component {
     this.state = {
         anchorEl: null,
         open: false,
+        aboutme: false,
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleAboutmeClose = this.handleAboutmeClose.bind(this);
+    this.handleAboutme = this.handleAboutme.bind(this);
   }; 
 
-  handleClick (event) {
+  handleClick(event) {
     this.setState({ open: true, anchorEl: event.currentTarget });
   };
 
-  handleRequestClose () {
+  handleRequestClose() {
     this.setState({ open: false });
+  };
+
+  handleAboutme() {
+    this.handleRequestClose();
+    this.setState({ aboutme: true });
+  }
+
+  handleAboutmeClose() {
+    this.setState({ aboutme: false });
   };
 
 
@@ -63,8 +75,8 @@ class Header extends React.Component {
                 onRequestClose={this.handleRequestClose}
               >
                 <MenuItem onClick={this.handleRequestClose}>My Portfolio</MenuItem>
-                <MenuItem onClick={this.handleRequestClose}>About Me</MenuItem>
-                <MenuItem onClick={this.handleRequestClose}>My Resume</MenuItem>
+                <MenuItem onClick={this.handleAboutme}>About Me</MenuItem>
+                <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="./static/resume.pdf">My Resume</a></MenuItem>
                 <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="http://github.com/ddai85">GitHub</a></MenuItem>
                 <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="https://www.linkedin.com/in/dan-dai-b5741976/">LinkedIn</a></MenuItem>
               </Menu>
@@ -74,7 +86,7 @@ class Header extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <Aboutme/>
+        <Aboutme handleAboutmeClose={this.handleAboutmeClose} open={this.state.aboutme}/>
       </div>
     );
   }

@@ -6,7 +6,7 @@ const projects = [
     picture: './static/yelpalytics-play.jpg',
     techstack: ['Node', 'ElasticSearch', 'Kibana', 'MySQL', 'AWS'],
     gitHub: 'https://github.com/git-reset-hard',
-    video: 'https://youtu.be/UHpM0OjfbHY',
+    video: 'https://youtu.be/3RH5Z-2CUhg',
   },
   {
     key: 2,
@@ -30,10 +30,10 @@ const projects = [
     key: 4,
     title: 'Personal Homepage',
     description: 'Personal landing page to display portfolio of apps and projects. Project cards are rendered dynamically and individual projects are easily added and removed.',
-    picture: './static/homepage-play.jpg',
+    picture: './static/homepage.jpg',
     techstack: ['React', 'Node/Express', 'AWS'],
     gitHub: 'https://github.com/ddai85/homepage',
-    video: 'https://youtu.be/UHpM0OjfbHY',
+    video: '#',
   },
   {
     key: 5,

@@ -57,9 +57,9 @@ class SimpleCard extends React.Component {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button href={props.details.achievements} dense color="primary">
+            {/* <Button href={props.details.achievements} dense color="primary">
               Individual Contribution
-            </Button>
+            </Button> */}
           </CardActions>
         </Card>
       </div>
