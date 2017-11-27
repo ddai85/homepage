@@ -78,7 +78,7 @@ class Header extends React.Component {
                 <MenuItem onClick={this.handleRequestClose}>My Portfolio</MenuItem>
                 <MenuItem onClick={this.handleAboutme}>About Me</MenuItem>
                 <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="http://github.com/ddai85">GitHub</a></MenuItem>
-                <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="https://www.linkedin.com/in/dan-dai-b5741976/">LinkedIn</a></MenuItem>
+                <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} target="_blank" href="https://www.linkedin.com/in/dan-dai">LinkedIn</a></MenuItem>
                 <MenuItem onClick={this.handleRequestClose}><a className={classes.menuLink} href="mailto:contact@dandai.info">Email Me</a></MenuItem>
               </Menu>
             </IconButton>
